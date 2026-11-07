@@ -1,58 +1,62 @@
 # isFake
 
-isFake es una aplicación Android para seleccionar una ubicación y publicarla como ubicación simulada mediante el proveedor de pruebas de ubicación de Android. La aplicación permite elegir coordenadas en un mapa o introducirlas manualmente, guardar ubicaciones favoritas y controlar la simulación desde una notificación persistente.
+<p align="center">
+  <img src="assets/app-icon.svg" alt="isFake app icon" width="112" />
+</p>
 
-## Funciones
+isFake is an Android app for choosing a location and publishing it as a mock location through Android's test location provider. Choose coordinates on a map or enter them manually, save favorite locations, and control the simulation from a persistent notification.
 
-- Selección de una ubicación mediante un mapa basado en OpenStreetMap, o entrada manual de latitud y longitud.
-- Inicio y detención de la simulación mediante un servicio en primer plano.
-- Configuración del intervalo de actualización, la precisión y la altitud.
-- Gestión local de ubicaciones favoritas.
-- Notificación persistente con una acción para detener el servicio.
-- Interfaz disponible en español e inglés según el idioma seleccionado para la aplicación en Android.
+## Features
 
-## Requisitos
+- Pick a location on an OpenStreetMap-based map or enter latitude and longitude manually.
+- Start and stop simulation with a foreground service.
+- Configure the update interval, accuracy, and altitude.
+- Save and manage favorite locations locally.
+- Use a persistent notification with an action to stop the service.
+- Switch between Spanish and English using Android's per-app language settings.
 
-- Android 12 o posterior (API 31+).
-- JDK 17 para compilar el proyecto.
-- Android SDK con la plataforma 36 instalada.
-- Conexión a Internet para cargar los mosaicos del mapa.
+## Requirements
 
-## Configuración del dispositivo
+- Android 12 or later (API 31+).
+- JDK 17 to build the project.
+- Android SDK with platform 36 installed.
+- Internet access to load map tiles.
 
-Android requiere seleccionar explícitamente una aplicación de ubicación simulada:
+## Device Setup
 
-1. Activa las Opciones para desarrolladores desde los ajustes del dispositivo. En la mayoría de los dispositivos, esto se habilita tocando siete veces el número de compilación en la sección de información del teléfono.
-2. En Opciones para desarrolladores, abre **Seleccionar aplicación para ubicación simulada** y elige **isFake**. La ruta y el nombre de esta opción pueden variar según el fabricante.
-3. Abre isFake, selecciona una ubicación en el mapa o introduce sus coordenadas y comienza la simulación.
-4. Concede los permisos de ubicación y notificaciones solicitados por Android.
+Android requires you to explicitly select an app for mock locations:
 
-## Compilación
+1. Enable Developer options in your device settings. On most devices, tap the build number seven times in the phone's About section.
+2. In Developer options, open **Select mock location app** and choose **isFake**. The setting's name and location can vary by manufacturer.
+3. Open isFake, choose a location on the map or enter its coordinates, then start the simulation.
+4. Grant the location and notification permissions requested by Android.
 
-Desde la raíz del proyecto, ejecuta:
+## Build
+
+From the project root, run:
 
 ```bash
 ./gradlew :app:assembleDebug
 ```
 
-El APK de depuración se genera en `app/build/outputs/apk/debug/app-debug.apk`. Para instalarlo en un dispositivo conectado mediante ADB:
+The debug APK is generated at `app/build/outputs/apk/debug/app-debug.apk`. To install it on a connected device using ADB, run:
 
 ```bash
 ./gradlew :app:installDebug
 ```
 
-## Tecnologías
+## Tech Stack
 
-- Kotlin 2.1.21 y Java 17.
-- Jetpack Compose y Material 3.
-- OSMDroid 6.1.20 para la visualización del mapa.
-- Hilt para inyección de dependencias.
-- AndroidX DataStore Preferences y Kotlin Coroutines/Flow para persistencia y estado.
-- Android `LocationManager` y servicio en primer plano para la simulación.
+- Kotlin 2.1.21 and Java 17.
+- Jetpack Compose and Material 3.
+- OSMDroid 6.1.20 for map display.
+- Hilt for dependency injection.
+- AndroidX DataStore Preferences and Kotlin Coroutines/Flow for persistence and state.
+- Android `LocationManager` and a foreground service for mock location updates.
 
-La aplicación tiene `minSdk 31`, `targetSdk 35` y compila contra Android SDK 36. Las versiones de plugins y dependencias se mantienen en `gradle/libs.versions.toml`.
+The app has `minSdk 31`, `targetSdk 35`, and compiles against Android SDK 36. Plugin and dependency versions are maintained in `gradle/libs.versions.toml`.
 
-## Estructura
+## Project Structure
 
 ```text
 app/src/main/
