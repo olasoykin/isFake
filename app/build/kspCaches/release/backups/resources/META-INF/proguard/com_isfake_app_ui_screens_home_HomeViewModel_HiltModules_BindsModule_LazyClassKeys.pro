@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.isfake.app.ui.screens.home.HomeViewModel

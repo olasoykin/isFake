@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/home/kin/.gradle/daemon/8.13/com.isfake.app-debug-50:/drawable_ic_launcher_monochrome.xml.flat",
+        "source": "/home/kin/.gradle/daemon/8.13/com.isfake.app-main-52:/drawable/ic_launcher_monochrome.xml"
+    },
+    {
+        "merged": "/home/kin/.gradle/daemon/8.13/com.isfake.app-debug-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/kin/.gradle/daemon/8.13/com.isfake.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.isfake.app-debug-50:/xml_locales_config.xml.flat",
+        "source": "com.isfake.app-main-52:/xml/locales_config.xml"
+    },
+    {
+        "merged": "/home/kin/.gradle/daemon/8.13/com.isfake.app-debug-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/kin/.gradle/daemon/8.13/com.isfake.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/kin/.gradle/daemon/8.13/com.isfake.app-debug-50:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/kin/.gradle/daemon/8.13/com.isfake.app-main-52:/drawable/ic_launcher_foreground.xml"
+    }
+]
